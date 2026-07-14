@@ -1,0 +1,22 @@
+#!/bin/bash
+
+PROJECT_ID="YOUR_GOOGLE_CLOUD_PROJECT"
+LOCATION="us-east1"
+
+PUBLIC_SERVER_HOSTNAME="YOUR_CLOUD_RUN_HOSTNAME"
+
+TWILIO_ACCOUNT_SID="YOUR_TWILIO_ACCOUNT_SID"
+
+# Leave blank when the Cloud Run service account authenticates to CES.
+AUTH_TOKEN_SECRET_PATH=""
+
+# Secret Manager name and version—not the secret value.
+TWILIO_AUTH_TOKEN_PATH="twilio-auth-token:latest"
+
+NUMBERS_COLLECTION_ID="ces-twilio-adapter-mappings"
+
+SERVICE_NAME="ces-twilio-adapter"
+SERVICE_ACCOUNT="ces-twilio-adapter@${PROJECT_ID}.iam.gserviceaccount.com"
+
+TIMEOUT="60m"
+CONCURRENCY="80"

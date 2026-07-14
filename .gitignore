@@ -1,0 +1,17 @@
+# Live configuration
+script/values.sh
+.env
+.env.*
+*.secret
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local tooling
+.DS_Store
+.vscode/
+.idea/
